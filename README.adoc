@@ -1,0 +1,37 @@
+= daggerok.now.sh image:https://travis-ci.org/daggerok/daggerok.now.sh.svg?branch=master["Build Status", link="https://travis-ci.org/daggerok/daggerok.now.sh"]
+
+using:
+
+- link:https://now.sh[now]
+- link:https://vuepress.vuejs.org/[vuepress]
+
+.usage
+[source,bash]
+----
+npm i -g now vuepress
+
+vuepress dev -p 3000 ./src
+vuepress build -d ./dist ./src
+
+now login
+
+now --static --public ./dist
+now alias ls
+----
+
+
+- https://daggerok.now.sh
+- https://dagger.now.sh
+- https://daggi.now.sh
+- https://dag.now.sh
+- https://mk.now.sh
+- https://maksim.now.sh
+- https://kostromin.now.sh
+- https://kotlin.now.sh
+- https://java.now.sh
+- https://js.now.sh
+- https://k8s.now.sh
+- https://do-it.now.sh
+- https://makeit.now.sh
+- https://this.now.sh
+- https://its.now.sh

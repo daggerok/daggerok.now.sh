@@ -1,0 +1,40 @@
+{
+  "name": "daggerok.now.sh",
+  "version": "0.0.2",
+  "main": "index.js",
+  "repository": "https://github.com/daggerok/daggerok.now.sh.git",
+  "author": "Maksim Kostromin <daggerok@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "cross-env": "5.2.0",
+    "now": "13.1.2",
+    "npm-run-all": "4.1.5",
+    "rimraf": "2.6.3",
+    "vuepress": "0.14.8",
+    "webpack": "4.25.1"
+  },
+  "scripts": {
+    "start": "vuepress dev -p 3000 ./src",
+    "prebuild": "rimraf -rf ./dist",
+    "build": "vuepress build -d ./dist ./src",
+    "build-gh-pages": "cross-env BASE_HREF='/daggerok.now.sh/' npm run build",
+    "predeploy": "now rm -y daggerok.now.sh",
+    "deploy": "now --force --public -V 2 --name=daggerok.now.sh deploy ./dist",
+    "postdeploy:this": "now alias this",
+    "postdeploy:maksim": "now alias maksim",
+    "postdeploy:kostromin": "now alias kostromin",
+    "postdeploy:daggerok": "now alias daggerok",
+    "postdeploy:dagger": "now alias dagger",
+    "postdeploy:daggi": "now alias daggi",
+    "postdeploy:dag": "now alias dag",
+    "postdeploy:its": "now alias its",
+    "postdeploy:mk": "now alias mk",
+    "postdeploy:js": "now alias js",
+    "postdeploy:k8s": "now alias k8s",
+    "postdeploy:java": "now alias java",
+    "postdeploy:kotlin": "now alias kotlin",
+    "postdeploy:makeit": "now alias makeit",
+    "postdeploy:do-it": "now alias makeit",
+    "postdeploy": "npm-run-all postdeploy:*"
+  }
+}
